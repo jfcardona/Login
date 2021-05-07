@@ -1,6 +1,6 @@
 #container {
   text-align: center;
-
+  width: 100%;
   position: absolute;
   left: 0;
   right: 0;
@@ -8,16 +8,43 @@
   transform: translateY(-50%);
 }
 
+ion-content {
+  --background: none;
+  background-image: url("https://i.pinimg.com/originals/90/1b/f6/901bf6e0a2742cf9084459945082e6dd.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #container strong {
   font-size: 20px;
   line-height: 26px;
+}
+
+#title {
+  color: white;
+  padding: 5%;
+}
+
+#inputes {
+  color: red;
+  padding: 2%;
+}
+
+#boton {
+  color: red;
+  padding: 1%;
+}
+
+.my-custom-class {
+  --background: #e5e5e5;
 }
 
 #container p {
   font-size: 16px;
   line-height: 22px;
 
-  color: #8c8c8c;
+  color: rgb(224, 224, 224);
 
   margin: 0;
 }

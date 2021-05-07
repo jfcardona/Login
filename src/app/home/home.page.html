@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Login
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,65 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Login</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div id="container" *ngIf="botonliberado == false">
+    <div id="title">
+    <strong>Bienvenido</strong>
+    <p>Escribe tu usuario y contraseña</p>
+    </div>  
+
+    <div id="inputes">
+    <ion-item>
+      <ion-label position="stacked" >Usuario</ion-label>
+      <ion-input type="text" placeholder="Usuario" [(ngModel)]="postData.username"></ion-input>
+    </ion-item>
+  </div>
+  <div id="inputes">
+    <ion-item>
+      <ion-label position="stacked">Contraseña</ion-label>
+      <ion-input type="password" placeholder="Contraseña" [(ngModel)]="postData.password"></ion-input>
+    </ion-item>
+  </div>
+  <div id="boton">
+    <ion-button expand="full" color="primary" (click)="validateInputs()">Iniciar Sesión</ion-button>
+  </div>
+  <div id="boton">
+    <ion-button expand="full" color="dark" (click)="registrate()">Registrate</ion-button>
+  </div>
+  </div>
+
+  <div id="container" *ngIf="botonliberado == true">
+    <div id="title">
+    <strong>Registrate</strong>
+    <p>Completa el siguiente formulario</p>
+    </div>  
+
+    <div id="inputes">
+    <ion-item>
+      <ion-label position="stacked" >Usuario</ion-label>
+      <ion-input type="text" placeholder="Usuario" [(ngModel)]="postData.usuario"></ion-input>
+    </ion-item>
+  </div>
+  <div id="inputes">
+    <ion-item>
+      <ion-label position="stacked">Contraseña</ion-label>
+      <ion-input type="text" placeholder="Contraseña" [(ngModel)]="postData.contra"></ion-input>
+    </ion-item>
+  </div>
+  <div id="inputes">
+    <ion-item>
+      <ion-label position="stacked">Repetir contraseña</ion-label>
+      <ion-input type="text" placeholder="Repetir contraseña" [(ngModel)]="postData.contra2"></ion-input>
+    </ion-item>
+  </div>
+  <div id="boton">
+    <ion-button expand="full" color="primary" (click)="validateInputs()">Registrate</ion-button>
+  </div>
+  <div id="boton">
+    <ion-button expand="full" color="dark" (click)="volver()">Volver</ion-button>
+  </div>
   </div>
 </ion-content>

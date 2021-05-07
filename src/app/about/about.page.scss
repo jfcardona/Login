@@ -1,0 +1,55 @@
+#container {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  ion-content {
+    --background: none;
+    background-image: url("https://cdn.pixabay.com/photo/2019/08/03/04/43/mountain-4381041_1280.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #title {
+    color: white;
+    padding: 5%;
+  }
+  
+  #inputes {
+    color: red;
+    padding: 2%;
+  }
+  
+  #boton {
+    color: red;
+    padding: 1%;
+  }
+  
+  .my-custom-class {
+    --background: #e5e5e5;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: rgb(224, 224, 224);
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  
